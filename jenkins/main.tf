@@ -9,7 +9,6 @@ resource "aws_instance" "my-instance" {
   vpc_security_group_ids = [aws_security_group.z1security.id]
   user_data = <<-EOF
   #! /bin/bash
-  #!/bin/bash
   sudo apt update -y
   sudo apt install default-jre -y
   sudo wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
